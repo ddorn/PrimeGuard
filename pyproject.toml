@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "primeguard"
+version = "0.1.0"
+description = "Implementation of PrimeGuard routing approach, presented at ICML 2024 NextGenAISafety workshop."
+authors = ["Blaze(j) Manczak <manczakb@gmail.com>"]
+include = [
+    "primeguard/templates/*",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+gradio = "^4.40"
+litellm = "^1.42"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
