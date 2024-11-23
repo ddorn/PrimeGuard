@@ -1,6 +1,10 @@
+from pathlib import Path
 import json
 from typing import List, Dict, Optional
 from jinja2 import Environment
+
+
+TEMPLATES_DIR = Path(__file__).parent / "templates"
 
 
 def extract_and_eval_json(input_text: str, max_jsons: Optional[int] = 1) -> List[Dict]:

@@ -1,4 +1,4 @@
-from utils import route_templates, extract_and_eval_json
+from .utils import route_templates, extract_and_eval_json
 
 def route(prompt, model, env, cached_results):
     """

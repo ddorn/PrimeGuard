@@ -3,6 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 import json
 from model import LitellmModel
 from routing import route
+import utils
 
 # Load cached results
 with open("cached_results.json", "r") as f:
@@ -10,7 +11,7 @@ with open("cached_results.json", "r") as f:
 
 # Define constants
 model = LitellmModel(model_id="mistral/open-mistral-7b")
-env = Environment(loader=FileSystemLoader("templates"))
+env = Environment(loader=FileSystemLoader(utils.TEMPLATES_DIR))
 
 def process_input(prompt, cached_prompt):
     """
